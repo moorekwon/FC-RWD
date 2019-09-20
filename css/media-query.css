@@ -9,38 +9,38 @@
     font-weight: 400;
 }
 
-/* 컨테이너 */
+/* All 컨테이너 */
 .container {
     background: silver;
     display: flex;
     flex-flow: row wrap;
 }
 
-/* 헤더 */
+/* All 헤더 */
 .header {
     background: yellow;
     height: 10vh;
 }
 
-/* 내비게이션 */
+/* All 내비게이션 */
 .navigation {
     background: pink;
     height: 10vh;
 }
 
-/* 메인 콘텐츠 */
+/* All 메인 콘텐츠 */
 .main-content {
     background: skyblue;
     height: 50vh;
 }
 
-/* 광고 */
+/* All 광고 */
 .ad {
     background: orange;
     height: 20vh;
 }
 
-/* 푸터 */
+/* All 푸터 */
 .footer {
     background: lime;
     height: 10vh;
@@ -49,7 +49,7 @@
 /* 모바일 스타일 */
 @media screen and (max-width: 799px) {
 
-    /* 컨테이너 */
+    /* Mobile 컨테이너 */
     .container {
         background: silver;
         display: flex;
@@ -57,31 +57,34 @@
         flex-flow: row wrap;
     }
 
-    /* 헤더 */
+    /* Mobile 헤더 */
     .header {
         flex: 1 1 100%;
         order: -1;
+        height: 10vh;
     }
 
-    /* 내비게이션 */
+    /* Mobile 내비게이션 */
     .navigation {
         flex: 1 1 100%;
         order: -1;
+        height: 10vh;
     }
 
-    /* 메인 콘텐츠 */
+    /* Mobile 메인 콘텐츠 */
     .main-content {
         height: 50vh;
         flex: 1 1 100%;
     }
 
-    /* 광고 */
+    /* Mobile 광고 */
     .ad {
         flex: 1 1 100%;
         order: -1;
+        height: 20vh;
     }
 
-    /* 푸터 */
+    /* Mobile 푸터 */
     .footer {
         height: 10vh;
         flex: 1 1 100%;
@@ -91,18 +94,130 @@
 /* 태블릿 스타일 */
 @media screen and (min-width: 50em) {
 
-    /* 컨테이너 */
-    .container {}
+    /* Tablet 컨테이너 */
+    .container {
+        background: silver;
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-flow: row wrap;
+    }
 
-    /* 메인 콘텐츠 */
-    .main-content {}
+    /* Tablet 헤더 */
+    .header {
+        flex: 1 1 70%;
+        order: -1;
+        height: 10vh;
+    }
 
-    /* 광고 */
-    .ad {}
+    /* Tablet 내비게이션 */
+    .navigation {
+        flex: 1 1 30%;
+        order: -1;
+        height: 10vh;
+    }
+
+    /* Tablet 메인 콘텐츠 */
+    .main-content {
+        height: calc(50vh + 10vh);
+        flex: 1 1 100%;
+    }
+
+    /* Tablet 광고 */
+    .ad {
+        flex: 1 1 100%;
+        order: -1;
+        height: 20vh;
+    }
+
+    /* Tablet 푸터 */
+    .footer {
+        height: 10vh;
+        flex: 1 1 100%;
+    }
 }
 
 /* 랩탑 스타일 */
-@media screen and (min-width: 64em) {}
+@media screen and (min-width: 64em) {
+    /* Labtop 컨테이너 */
+    .container {
+        background: silver;
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-flow: row wrap;
+    }
+
+    /* Labtop 헤더 */
+    .header {
+        flex: 1 1 100%;
+        order: -1;
+        height: 10vh;
+    }
+
+    /* Labtop 내비게이션 */
+    .navigation {
+        flex: 1 1 100%;
+        order: -2;
+        height: 10vh;
+    }
+
+    /* Labtop 메인 콘텐츠 */
+    .main-content {
+        height: calc(50vh + 20vh);
+        flex: 1 1 70%;
+    }
+
+    /* Labtop 광고 */
+    .ad {
+        flex: 1 1 30%;
+        order: -1;
+        height: 20vh;
+    }
+
+    /* Labtop 푸터 */
+    .footer {
+        height: 10vh;
+        flex: 1 1 100%;
+    }
+}
 
 /* 와이드 스크린 스타일 */
-@media screen and (min-width: 100em) {}
+@media screen and (min-width: 100em) {
+        /* WS 컨테이너 */
+        .container {
+            background: silver;
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-flow: row wrap;
+        }
+    
+        /* WS 헤더 */
+        .header {
+            flex: 1 1 100%;
+            order: -1;
+            height: 10vh;
+        }
+    
+        /* WS 내비게이션 */
+        .navigation {
+            flex: 1 1 30%;
+            height: 10vh;
+        }
+    
+        /* WS 메인 콘텐츠 */
+        .main-content {
+            height: calc(50vh + 20vh);
+            flex: 1 1 50%;
+        }
+    
+        /* WS 광고 */
+        .ad {
+            flex: 1 1 20%;
+            height: 20vh;
+        }
+    
+        /* WS 푸터 */
+        .footer {
+            height: 10vh;
+            flex: 1 1 100%;
+        }
+}
