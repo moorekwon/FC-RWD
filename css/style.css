@@ -2,6 +2,15 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(./fonts.css);
 
+/* .book-heading .point로 이동 */
+:root {
+  --point1: #abd375;
+  --point2: #e8ca58;
+  --point3: #c7b39a;
+  --point4: #eea60a;
+  --point5: #6aaee6;
+}
+
 *,
 *::before,
 *::after {
@@ -52,15 +61,13 @@ a {
   justify-content: space-evenly;
 }
 
+/* responsive content */
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
 /* All device */
-.main {
-  background: skyblue;
-}
-
-.book {
-  background: lime;
-}
-
 .news {
   background: goldenrod;
 }
@@ -91,6 +98,92 @@ a {
   border-radius: 0.35em;
   height: 2em;
   margin-right: 0.5em;
+}
+
+/* all main */
+.sprite {
+  background: url(./images/sprite_main.png) no-repeat;
+  /* extension - emmet: evaluate math expression 사용하면 자동으로 계산 */
+  /* 기본사이즈 16px, 이미지크기 50px -> 16/50 ~= 2.6(em) */
+  height: 60px;
+  padding-left: 65px;
+}
+
+/* 'heading'이 포함되어 있는 class 선택 */
+.main [class*="heading"] {
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  /* column -> 주축 y축에서 가운데 정렬하려면 justify-content 사용 */
+  justify-content: center;
+}
+
+.news-heading {
+  background-position: 0 -230px;
+}
+
+.board-heading {
+  background-position: 0 -115px;
+}
+
+.favorite-heading {
+  background-position: 0 -345px;
+}
+
+.twitter-heading {
+  background-position: 0 -460px;
+}
+
+/* 상단 :root로 이동 */
+.book-heading .point {
+  color: var(--point1);
+}
+
+.news-heading .point {
+  color: var(--point2);
+}
+
+.board-heading .point {
+  color: var(--point3);
+}
+
+.favorite-heading .point {
+  color: var(--point4);
+}
+
+.twitter-heading .point {
+  color: var(--point5);
+}
+
+/* recommend book */
+.book-cover {
+  text-align: center;
+}
+
+.book-detail {
+  /* flex-row를 html에 클래스 추가해도 됨 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-author-name {
+  margin-left: 0.5em;
+}
+
+.book-grade {
+  margin: 0;
+  width: 100%;
+  /* justigy-content만으로 가운데정렬 충족시킬 수 없음 <- width:100% 줬기 때문에
+  text-align: center 적용 */
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--point1);
+}
+
+/* "summary"로 끝나는 class 선택 */
+[class$="summary"] {
+  line-height: 2;
 }
 
 /* Mobile device */
