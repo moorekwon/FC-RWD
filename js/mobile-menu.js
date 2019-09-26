@@ -44,8 +44,6 @@ if (viewport.matches) {
     nav.removeClass('nav-act');
   });
 } else {
-  items.attr('role', 'presentation');
-} else {
   var bar = $('.bar');
   items.attr('role', 'presentation');
   bar.attr('aria-hidden', 'true');
