@@ -10,7 +10,7 @@
 }
 
 /* Reset CSS */
-ul, ol, li {
+ul, ol {
   list-style: none;
   padding-left: 0;
 }
@@ -52,14 +52,6 @@ a {
 }
 
 /* All device */
-.container {
-  background: silver;
-}
-
-.header {
-  background: yellow;
-}
-
 .navigation {
   background: pink;
 }
@@ -235,18 +227,20 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 75vw;
+    width: 0;
+    overflow: hidden;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    margin: 0;
-    padding: 2em;
     transform: translateX(-100%);
     transition: all 200ms;
   }
 
   .nav-act .menu {
     transform: none;
+    width: 75vw;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    margin: 0;
+    padding: 2em;
   }
 
   .menu-list {
@@ -256,7 +250,6 @@ a {
   .menu-item {
     display: block;
     padding: 0.5em;
-    background: purple;
   }
 
   .sub-menu {
@@ -312,6 +305,44 @@ a {
   .navigation,
   .footer {
     width: 100%;
+  }
+
+  /* desktop header */
+  .header {
+    display: block;
+    position: relative;
+  }
+
+  /* desktop logo */
+  .logo {
+    background: blue;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    display: none;
+  }
+
+  /* desktop member */
+  .member {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .bar::before {
+    /* 장식용 | -> 스크린리더에서 읽어주지 않도록 해야 함 (aria-hidden="true") */
+    content: "|";
+    margin: 0 0.5em;
+  }
+
+  .member a {
+    display: inline-block;
+    padding: 0.5em 0;
+  }
+
+  /* desktop main */
+  .btn-menubar {
+    display: none;
   }
 
   .main {
