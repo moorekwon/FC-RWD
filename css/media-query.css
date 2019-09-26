@@ -1,223 +1,26 @@
 @charset "utf-8";
-
-/* 모든 디바이스 */
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 1em;
-    font-weight: 400;
+/* Mobile CSS */
+html{
+  font-size: 10px;
 }
-
-/* All 컨테이너 */
-.container {
-    background: silver;
-    display: flex;
-    flex-flow: row wrap;
+body{
+  background-color: yellow;
 }
-
-/* All 헤더 */
-.header {
-    background: yellow;
-    height: 10vh;
+/* Tablet, Laptop CSS */
+@media screen and (min-width: 50em){
+  html{
+    font-size: 14px;
+  }
+  body{
+    background-color: pink;
+  }
 }
-
-/* All 내비게이션 */
-.navigation {
-    background: pink;
-    height: 10vh;
-}
-
-/* All 메인 콘텐츠 */
-.main-content {
-    background: skyblue;
-    height: 50vh;
-}
-
-/* All 광고 */
-.ad {
-    background: orange;
-    height: 20vh;
-}
-
-/* All 푸터 */
-.footer {
-    background: lime;
-    height: 10vh;
-}
-
-/* 모바일 스타일 */
-@media screen and (max-width: 799px) {
-
-    /* Mobile 컨테이너 */
-    .container {
-        background: silver;
-        display: flex;
-        /* flex-wrap: wrap; */
-        flex-flow: row wrap;
-    }
-
-    /* Mobile 헤더 */
-    .header {
-        flex: 1 1 100%;
-        order: -1;
-        height: 10vh;
-    }
-
-    /* Mobile 내비게이션 */
-    .navigation {
-        flex: 1 1 100%;
-        order: -1;
-        height: 10vh;
-    }
-
-    /* Mobile 메인 콘텐츠 */
-    .main-content {
-        height: 50vh;
-        flex: 1 1 100%;
-    }
-
-    /* Mobile 광고 */
-    .ad {
-        flex: 1 1 100%;
-        order: -1;
-        height: 20vh;
-    }
-
-    /* Mobile 푸터 */
-    .footer {
-        height: 10vh;
-        flex: 1 1 100%;
-    }
-}
-
-/* 태블릿 스타일 */
-@media screen and (min-width: 50em) {
-
-    /* Tablet 컨테이너 */
-    .container {
-        background: silver;
-        display: flex;
-        /* flex-wrap: wrap; */
-        flex-flow: row wrap;
-    }
-
-    /* Tablet 헤더 */
-    .header {
-        flex: 1 1 70%;
-        order: -1;
-        height: 10vh;
-    }
-
-    /* Tablet 내비게이션 */
-    .navigation {
-        flex: 1 1 30%;
-        order: -1;
-        height: 10vh;
-    }
-
-    /* Tablet 메인 콘텐츠 */
-    .main-content {
-        height: calc(50vh + 10vh);
-        flex: 1 1 100%;
-    }
-
-    /* Tablet 광고 */
-    .ad {
-        flex: 1 1 100%;
-        order: -1;
-        height: 20vh;
-    }
-
-    /* Tablet 푸터 */
-    .footer {
-        height: 10vh;
-        flex: 1 1 100%;
-    }
-}
-
-/* 랩탑 스타일 */
-@media screen and (min-width: 64em) {
-    /* Labtop 컨테이너 */
-    .container {
-        background: silver;
-        display: flex;
-        /* flex-wrap: wrap; */
-        flex-flow: row wrap;
-    }
-
-    /* Labtop 헤더 */
-    .header {
-        flex: 1 1 100%;
-        order: -1;
-        height: 10vh;
-    }
-
-    /* Labtop 내비게이션 */
-    .navigation {
-        flex: 1 1 100%;
-        order: -2;
-        height: 10vh;
-    }
-
-    /* Labtop 메인 콘텐츠 */
-    .main-content {
-        height: calc(50vh + 20vh);
-        flex: 1 1 70%;
-    }
-
-    /* Labtop 광고 */
-    .ad {
-        flex: 1 1 30%;
-        order: -1;
-        height: 20vh;
-    }
-
-    /* Labtop 푸터 */
-    .footer {
-        height: 10vh;
-        flex: 1 1 100%;
-    }
-}
-
-/* 와이드 스크린 스타일 */
-@media screen and (min-width: 100em) {
-        /* WS 컨테이너 */
-        .container {
-            background: silver;
-            display: flex;
-            /* flex-wrap: wrap; */
-            flex-flow: row wrap;
-        }
-    
-        /* WS 헤더 */
-        .header {
-            flex: 1 1 100%;
-            order: -1;
-            height: 10vh;
-        }
-    
-        /* WS 내비게이션 */
-        .navigation {
-            flex: 1 1 30%;
-            height: 10vh;
-        }
-    
-        /* WS 메인 콘텐츠 */
-        .main-content {
-            height: calc(50vh + 20vh);
-            flex: 1 1 50%;
-        }
-    
-        /* WS 광고 */
-        .ad {
-            flex: 1 1 20%;
-            height: 20vh;
-        }
-    
-        /* WS 푸터 */
-        .footer {
-            height: 10vh;
-            flex: 1 1 100%;
-        }
+/* Wide Screen CSS */
+@media screen and (min-width: 64em){
+  html{
+    font-size: 20px;
+  }
+  body{
+    background-color: skyblue;
+  }
 }
