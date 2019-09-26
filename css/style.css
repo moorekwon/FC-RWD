@@ -10,7 +10,8 @@
 }
 
 /* Reset CSS */
-ul, ol {
+ul,
+ol {
   list-style: none;
   padding-left: 0;
 }
@@ -52,10 +53,6 @@ a {
 }
 
 /* All device */
-.navigation {
-  background: pink;
-}
-
 .main {
   background: skyblue;
 }
@@ -84,8 +81,21 @@ a {
   background: orange;
 }
 
+/* all search */
+.search {
+  text-align: right;
+}
+
+[type="search"] {
+  border: 1px solid #aaa;
+  border-radius: 0.35em;
+  height: 2em;
+  margin-right: 0.5em;
+}
+
 /* Mobile device */
 @media screen and (max-width: 62.5em) {
+
   /* mobile grid */
   .col-m1 {
     width: 20%;
@@ -109,12 +119,14 @@ a {
     padding-bottom: 1em;
   }
 
-  .logo, .member, .search {
+  .logo,
+  .member,
+  .search {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
   }
- 
+
   /* mobile member */
   .member {
     order: -1;
@@ -136,16 +148,8 @@ a {
   }
 
   /* mobile search */
-  .search {
-    text-align: right;
-  }
-
   [type="search"] {
-    border: 1px solid #aaa;
-    border-radius: 0.35em;
-    height: 2em;
     width: calc(100% - 3em);
-    margin-right: 0.5em;
   }
 
   .btn-search {
@@ -222,7 +226,7 @@ a {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
   }
-  
+
   .menu {
     position: fixed;
     top: 0;
@@ -275,6 +279,7 @@ a {
 
 /* Desktop device */
 @media screen and (min-width: 62.5em) {
+
   /* Desktop grid */
   .col-d3 {
     width: calc(65px * 3 + 20px * 2);
@@ -283,7 +288,7 @@ a {
   .col-d4 {
     width: calc(65px * 4 + 20px * 3);
   }
-  
+
   .col-d5 {
     width: calc(65px * 5 + 20px * 4);
   }
@@ -298,6 +303,7 @@ a {
   }
 
   .header,
+  .menu,
   .main {
     width: 1000px;
   }
@@ -311,16 +317,16 @@ a {
   .header {
     display: block;
     position: relative;
+    padding-bottom: 1.5em;
   }
 
   /* desktop logo */
   .logo {
-    background: blue;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50%;
     margin: 0;
-    display: none;
+    transform: translateY(-50%);
   }
 
   /* desktop member */
@@ -340,9 +346,57 @@ a {
     padding: 0.5em 0;
   }
 
+  /* desktop search */
+  [type="search"] {
+    width: 40%;
+  }
+
+  .btn-search {
+    border: 1px solid #aaa;
+    border-radius: 0.5em;
+    background: #988674;
+    color: #fff;
+    height: 2em;
+    padding: 0 1em;
+  }
+
   /* desktop main */
+  .navigation {
+    background: #988574;
+    color: #fff;
+    /* border-top: 2px solid #000;
+    border-bottom: 2px solid #000; */
+    /* blur 효과 -> box-shadow 3번째 값 2px */
+    box-shadow: 0 -1px 2px 0 #aaa, 0 1px 2px 0 #aaa;
+  }
+
   .btn-menubar {
     display: none;
+  }
+
+  .menu {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-item {
+    font-weight: 700;
+    font-size: 1.15em;
+    padding: 0.35em 0;
+    display: block;
+    margin-bottom: 0.5em;
+    text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+  }
+
+  .sub-menu li {
+    margin: 0.5em 0;
+  }
+
+  .sub-menu a {
+    display: block;
+    padding: 0.35em 0;
   }
 
   .main {
