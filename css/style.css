@@ -318,6 +318,12 @@ a {
     width: 100%;
   }
 
+  /* mobile layout */
+  .container {
+    width: 100%;
+    position: relative;
+  }
+  
   /* mobile header */
   .header {
     background: #32302e;
