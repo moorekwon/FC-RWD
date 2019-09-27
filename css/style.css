@@ -93,10 +93,6 @@ a {
 }
 
 /* All device */
-.footer {
-  background: orange;
-}
-
 /* all search */
 .search {
   text-align: right;
@@ -116,6 +112,10 @@ a {
   /* 기본사이즈 16px, 이미지크기 50px -> 16/50 ~= 2.6(em) */
   height: 60px;
   padding-left: 65px;
+}
+
+.main {
+  width: 100%;
 }
 
 /* 'heading'이 포함되어 있는 class 선택 */
@@ -200,6 +200,10 @@ a {
   position: relative;
 }
 
+.board-list {
+  margin-left: 1em;
+}
+
 .board-list li {
   display: flex;
   margin: .5em 0;
@@ -224,6 +228,7 @@ a {
 /* all favorite */
 .favorite-list {
   counter-reset: initial;
+  margin-left: 1em;
 }
 
 .favorite-list li {
@@ -251,30 +256,46 @@ a {
 
 /* all twitter */
 .twitter {
-  background: yellow;
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
   grid-auto-rows: minmax(2em, auto);
 }
 
-.twitter-heading, .twitter-user-info, .twitter-summary {
+.twitter-heading,
+.twitter-user-info,
+.twitter-summary {
   grid-column: 1/3;
 }
 
-.twitter-user-name, .twitter-user-id {
+.twitter-user-name,
+.twitter-user-id {
   display: inline-block;
   margin: 0;
 }
 
 .twitter-profile {
   grid-column: 3/4;
-  grid-row: 1/5;
+  grid-row: 2/5;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .twitter-thumbnail {
   border: 1px solid #32302e;
   padding: 0.5em;
   border-radius: 50%;
+}
+
+/* all footer */
+.footer {
+  background: #988574;
+  color: #fff;
+  padding: 1.5em;
+}
+
+.address {
+  font-style: normal;
+  font-size: 0.85em;
 }
 
 /* Mobile device */
@@ -459,25 +480,56 @@ a {
   .menu-act .sub-menu {
     display: block;
   }
+
+  /* mobile main */
+  .main {
+    padding: 0 20px;
+  }
+
+  /* mobile footer */
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .address span {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+}
+
+/* tablet device */
+@media screen and (min-width: 37.5em) and (max-width: 62.5em) {
+
+  .favorite,
+  .twitter {
+    width: 50%;
+  }
 }
 
 /* Desktop device */
 @media screen and (min-width: 62.5em) {
+
   /* Desktop grid */
   .col-d3 {
-    width: calc(65px * 3 + 20px * 2);
+    /* width: calc(65px * 3 + 20px * 2); */
+    /* gridcss.com 이용 */
+    width: 23.8%;
   }
 
   .col-d4 {
-    width: calc(65px * 4 + 20px * 3);
+    /* width: calc(65px * 4 + 20px * 3); */
+    width: 32.267%;
   }
 
   .col-d5 {
-    width: calc(65px * 5 + 20px * 4);
+    /* width: calc(65px * 5 + 20px * 4); */
+    width: 40.733%;
   }
 
   .col-d8 {
-    width: calc(65px * 8 + 20px * 7);
+    /* width: calc(65px * 8 + 20px * 7); */
+    width: 66.133%;
   }
 
   .container {
@@ -488,7 +540,9 @@ a {
   .header,
   .menu,
   .main {
-    width: 1000px;
+    /* width: 1000px; */
+    width: 80%;
+    max-width: 1200px;
   }
 
   .navigation,
@@ -588,5 +642,10 @@ a {
 
   .favorite {
     order: 1;
+  }
+
+  /* desktop footer */
+  .footer {
+    text-align: center;
   }
 }
