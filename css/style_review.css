@@ -1,0 +1,195 @@
+@charset "utf-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(./fonts.css);
+
+/* reset css */
+*,
+*::before,
+*::after {
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+fieldset {
+    border: 0 none;
+}
+
+legend,
+.ally-hidden {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* grid module */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* all device */
+/* all header */
+/* all header - search */
+.search fieldset input {
+    border: 1px solid #aaa;
+    border-radius: 0.35em;
+    height: 2em;
+    margin-right: 0.5em;
+}
+
+/* mobile device */
+@media screen and (max-width: 62.5em) {
+    .container {
+        width: 100%;
+    }
+
+    /* mobile header */
+    .header {
+        background: #32302e;
+        padding-bottom: 1em;
+    }
+
+    .logo,
+    .member,
+    .search {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* mobile header - member */
+    .member {
+        order: -1;
+        background: #988574;
+        display: flex;
+        justify-content: flex-end;
+        color: #fff;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .member li a {
+        display: block;
+        padding-top: 0.35em;
+        padding-bottom: 0.35em;
+        margin-left: 1em;
+    }
+
+    .member li .bar {
+        display: none;
+    }
+
+    /* mobile header - search */
+    .search fieldset {
+        padding: 0 10px;
+    }
+
+    .search fieldset input {
+        width: calc(100% - 3.2em);
+        margin-right: 1em;
+    }
+
+    .search fieldset .btn-search {
+        background: transparent;
+        border: 0 none;
+        width: 2em;
+        height: 2em;
+        position: absolute;
+    }
+
+    .search fieldset .btn-search::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(./images/btn_search.png) no-repeat;
+        background-size: cover;
+    }
+}
+
+/* desktop device */
+@media screen and (min-width: 62.5em) {
+    .container {
+        align-items: center;
+    }
+
+    /* desktop header */
+    .header {
+        width: 80%;
+        display: block;
+        padding-bottom: 1.5em;
+        position: relative;
+    }
+
+    /* desktop header - logo */
+    .logo {
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    /* desktop header - member */
+    .member {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .member li {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+    
+    .member li .bar {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .member li a {
+        display: inline-block;
+    }
+
+    /* desktop header - search */
+    .search {
+        text-align: right;
+    }
+    
+    .search fieldset {
+        padding: 0;
+    }
+
+    .search fieldset input {
+        width: 40%;
+    }
+
+    .search fieldset .btn-search {
+        background: #988574;
+        border: 1px solid #aaa;
+        border-radius: 0.5em;
+        color: #fff;
+        height: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}

@@ -38,7 +38,7 @@ legend,
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  clip-path: polygon(0 0, 0 0, 0 0)
+  clip-path: polygon(0 0, 0 0, 0 0);
 }
 
 a {
@@ -597,7 +597,7 @@ a {
   .btn-search {
     border: 1px solid #aaa;
     border-radius: 0.5em;
-    background: #988674;
+    background: #988574;
     color: #fff;
     height: 2em;
     padding: 0 1em;
